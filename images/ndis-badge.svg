@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="220" height="110" viewBox="0 0 220 110" role="img" aria-label="NDIS — funding may be available">
-<rect x="2" y="2" width="216" height="106" rx="22" fill="#ffffff" stroke="#3f7a5a" stroke-width="4"/>
-<text x="110" y="62" text-anchor="middle" font-family="Manrope, Arial, Helvetica, sans-serif" font-size="46" font-weight="800" fill="#1f3028" letter-spacing="1">NDIS</text>
-<path d="M110 86 l-9 -8.5 a5.2 5.2 0 1 1 9 -6.5 a5.2 5.2 0 1 1 9 6.5 z" fill="#e8763f"/>
+<rect x="2" y="2" width="216" height="106" rx="22" fill="#ffffff" stroke="#5f8c6e" stroke-width="4"/>
+<text x="110" y="62" text-anchor="middle" font-family="Manrope, Arial, Helvetica, sans-serif" font-size="46" font-weight="800" fill="#243329" letter-spacing="1">NDIS</text>
+<path d="M110 86 l-9 -8.5 a5.2 5.2 0 1 1 9 -6.5 a5.2 5.2 0 1 1 9 6.5 z" fill="#ff6f59"/>
 </svg>

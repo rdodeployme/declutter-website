@@ -10,16 +10,17 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
-  --ink:#243329;        /* deep green-black */
-  --forest:#5f8c6e;     /* primary green */
-  --sage:#a9cbb3;       /* soft green */
-  --sage-soft:#eaf3ec;
-  --cream:#fff1ea;
+  --ink:#1b2f26;        /* deep green-black */
+  --forest:#234d3a;     /* primary green */
+  --sage:#9fbf9a;       /* soft green */
+  --sage-soft:#eef0e4;
+  --cream:#f6eddc;
   --paper:#ffffff;
-  --clay:#ff6f59;       /* warm accent */
-  --clay-soft:#ffe4de;
-  --text:#2b3a32;
-  --muted:#5c6b62;
+  --clay:#d9a441;       /* warm accent */
+  --clay-soft:#f7e6c2;
+  --honey-deep:#a8741f;
+  --text:#26342c;
+  --muted:#5a665d;
   --line:rgba(31,48,40,.12);
   --radius:20px;
   --shadow:0 18px 50px rgba(31,48,40,.10);
@@ -37,12 +38,12 @@ h2{font-size:clamp(2rem,4.2vw,3.1rem)}
 h3{font-size:1.35rem;line-height:1.25}
 p{margin:0 0 1em}
 .wrap{width:min(1180px,100% - 40px);margin-inline:auto}
-.eyebrow{display:inline-block;font-weight:700;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--clay);margin-bottom:14px}
+.eyebrow{display:inline-block;font-weight:700;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--honey-deep);margin-bottom:14px}
 .lead{font-size:1.18rem;color:var(--muted);max-width:60ch}
 .btn{display:inline-flex;align-items:center;gap:10px;padding:16px 26px;border-radius:999px;font-weight:700;font-size:1rem;text-decoration:none;border:2px solid transparent;transition:transform .15s ease,background .15s ease,color .15s ease;cursor:pointer;line-height:1}
 .btn:hover{transform:translateY(-2px)}
-.btn-primary{background:var(--clay);color:#fff}
-.btn-primary:hover{background:#e85c46}
+.btn-primary{background:var(--clay);color:var(--ink)}
+.btn-primary:hover{background:#c9932f}
 .btn-dark{background:var(--forest);color:#fff}
 .btn-dark:hover{background:var(--ink)}
 .btn-ghost{background:transparent;color:var(--ink);border-color:var(--ink)}
@@ -59,7 +60,7 @@ header.nav{position:sticky;top:0;z-index:50;background:rgba(255,253,249,.92);bac
 .logo img{height:44px;width:auto}
 .nav nav{display:flex;gap:28px;font-weight:600;font-size:.95rem}
 .nav nav a{text-decoration:none;color:var(--ink);opacity:.85}
-.nav nav a:hover{opacity:1;color:var(--clay)}
+.nav nav a:hover{opacity:1;color:var(--honey-deep)}
 .nav-cta{display:flex;align-items:center;gap:18px}
 .phone{font-weight:800;text-decoration:none;color:var(--ink);white-space:nowrap}
 .phone small{display:block;font-size:.72rem;font-weight:600;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
@@ -110,7 +111,7 @@ header.nav{position:sticky;top:0;z-index:50;background:rgba(255,253,249,.92);bac
 .svc img{aspect-ratio:16/10;object-fit:cover;width:100%}
 .svc-body{padding:26px 26px 28px;display:flex;flex-direction:column;gap:10px;flex:1}
 .svc-body p{color:var(--muted);margin:0;flex:1}
-.svc-body a{font-weight:700;color:var(--clay);text-decoration:none;margin-top:6px}
+.svc-body a{font-weight:700;color:var(--honey-deep);text-decoration:none;margin-top:6px}
 .svc-body a:hover{text-decoration:underline}
 @media (max-width:960px){.svc-grid{grid-template-columns:1fr 1fr}}
 @media (max-width:620px){.svc-grid{grid-template-columns:1fr}}
@@ -118,12 +119,12 @@ header.nav{position:sticky;top:0;z-index:50;background:rgba(255,253,249,.92);bac
 /* ---------- One team ---------- */
 .oneteam{background:var(--forest);color:#fff}
 .oneteam h2,.oneteam h3{color:#fff}
-.oneteam .eyebrow{color:#ffd9d2}
+.oneteam .eyebrow{color:#f0cf7a}
 .oneteam .wrap{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
 .oneteam p{color:rgba(255,255,255,.82)}
 .flow{list-style:none;padding:0;margin:0;display:grid;gap:14px;counter-reset:step}
 .flow li{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:16px;padding:20px 22px 20px 74px;position:relative}
-.flow li::before{counter-increment:step;content:counter(step);position:absolute;left:20px;top:18px;width:38px;height:38px;border-radius:50%;background:var(--clay);color:#fff;display:grid;place-items:center;font-weight:800}
+.flow li::before{counter-increment:step;content:counter(step);position:absolute;left:20px;top:18px;width:38px;height:38px;border-radius:50%;background:var(--clay);color:var(--ink);display:grid;place-items:center;font-weight:800}
 .flow strong{display:block;font-size:1.05rem;margin-bottom:4px}
 .flow span{color:rgba(255,255,255,.75);font-size:.95rem}
 @media (max-width:900px){.oneteam .wrap{grid-template-columns:1fr;gap:40px}}
@@ -202,7 +203,7 @@ footer.site{background:var(--ink);color:rgba(255,255,255,.8);padding:60px 0 32px
 }
 
 /* ---------- Multi-page additions ---------- */
-.nav nav a.active{opacity:1;color:var(--clay);border-bottom:2px solid var(--clay);padding-bottom:4px}
+.nav nav a.active{opacity:1;color:var(--honey-deep);border-bottom:2px solid var(--clay);padding-bottom:4px}
 .page-hero{background:var(--cream);padding:72px 0 64px}
 .page-hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
 .page-hero img{border-radius:24px;aspect-ratio:4/3;object-fit:cover;width:100%;box-shadow:var(--shadow)}
@@ -211,7 +212,7 @@ footer.site{background:var(--ink);color:rgba(255,255,255,.8);padding:60px 0 32px
 @media (max-width:900px){.page-hero .wrap{grid-template-columns:1fr;gap:32px}.page-hero{padding:48px 0}}
 .breadcrumb{font-size:.85rem;font-weight:600;color:var(--muted);margin-bottom:18px}
 .breadcrumb a{text-decoration:none;color:var(--muted)}
-.breadcrumb a:hover{color:var(--clay)}
+.breadcrumb a:hover{color:var(--honey-deep)}
 
 /* Services detail */
 .svc-detail{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;padding:56px 0;border-bottom:1px solid var(--line)}
@@ -227,7 +228,7 @@ footer.site{background:var(--ink);color:rgba(255,255,255,.8);padding:60px 0 32px
 @media (max-width:900px){.svc-detail{grid-template-columns:1fr;gap:28px;padding:44px 0}.svc-detail:nth-child(even) .svc-img{order:0}}
 .jump{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
 .jump a{background:#fff;border:1px solid var(--line);border-radius:999px;padding:9px 16px;font-size:.9rem;font-weight:700;text-decoration:none;color:var(--ink)}
-.jump a:hover{border-color:var(--clay);color:var(--clay)}
+.jump a:hover{border-color:var(--honey-deep);color:var(--honey-deep)}
 
 /* Teasers */
 .teaser .wrap{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
@@ -238,7 +239,7 @@ footer.site{background:var(--ink);color:rgba(255,255,255,.8);padding:60px 0 32px
 .cta-band h2{color:#fff;max-width:18ch}
 .cta-band p{color:rgba(255,255,255,.8);margin:8px 0 0}
 .cta-band .actions{display:flex;gap:14px;flex-wrap:wrap}
-.more{display:inline-block;margin-top:26px;font-weight:700;color:var(--clay);text-decoration:none}
+.more{display:inline-block;margin-top:26px;font-weight:700;color:var(--honey-deep);text-decoration:none}
 .more:hover{text-decoration:underline}
 .center{text-align:center;max-width:720px;margin:0 auto}
 
@@ -307,7 +308,7 @@ html{scroll-behavior:auto}
 .trust li.ndis{list-style:none;margin-top:6px;width:100%}
 .hero-actions{margin-bottom:22px}
 .topbar{background:var(--forest)}
-.eyebrow{color:#e0553f}
+.eyebrow{color:#a8741f}
 .why-card{background:var(--sage-soft)}
 .how .num{color:var(--sage)}
 .how-note{background:var(--clay-soft)}
@@ -350,7 +351,7 @@ footer.site{background:var(--ink)}
         <li><span class="tick">✓</span>Fixed-price consultation</li>
         <li><span class="tick">✓</span>Reuse and recycle before landfill</li>
       </ul>
-      <div style="margin-top:18px"><a class="ndis-tag" href="#how-it-works--ndis"><img src="images/ndis-badge.svg" alt="NDIS"><span>Registered NDIS provider<small>NDIS Provider No. pending</small></span></a></div>
+      <div style="margin-top:18px"><a class="ndis-tag" href="#how-it-works--ndis"><img src="images/ndis-badge.svg" alt="NDIS"><span>Registered NDIS provider<small>NDIS Registration No. 4-IMFFQ1S</small></span></a></div>
     </div>
     <div class="hero-media">
       <img src="images/declutter-hero.jpg" alt="Two of the Declutter team laughing together on a front verandah">
@@ -460,7 +461,7 @@ footer.site{background:var(--ink)}
       <strong>Talk to us about your plan</strong>
       <p>Tell us a little about your situation and who manages your plan. We'll explain what we can do, what it costs, and how it's billed to your plan.</p>
       <a class="btn btn-primary" href="#contact">Let's make a time to talk</a>
-      <div style="margin-top:16px"><a class="ndis-tag" href="#how-it-works--ndis"><img src="images/ndis-badge.svg" alt="NDIS"><span>Registered NDIS provider<small>NDIS Provider No. pending</small></span></a></div>
+      <div style="margin-top:16px"><a class="ndis-tag" href="#how-it-works--ndis"><img src="images/ndis-badge.svg" alt="NDIS"><span>Registered NDIS provider<small>NDIS Registration No. 4-IMFFQ1S</small></span></a></div>
     </div>
   </div>
 </section>
@@ -504,7 +505,7 @@ footer.site{background:var(--ink)}
       <h1>What we help with</h1>
       <p class="lead">Our core job is reducing volume: getting a home back to a level of stuff you can actually live with, then taking the excess away. Here's what that looks like in practice.</p>
       <div class="jump"><a href="#services--decluttering">Decluttering &amp; home organising</a><a href="#services--downsizing">Downsizing &amp; moving</a><a href="#services--estates">Deceased estates</a><a href="#services--hoarding">Hoarding &amp; squalor support</a><a href="#services--rubbish">Rubbish &amp; unwanted item removal</a></div>
-      <a class="ndis-tag" href="#how-it-works--ndis"><img src="images/ndis-badge.svg" alt="NDIS"><span>Registered NDIS provider<small>NDIS Provider No. pending</small></span></a>
+      <a class="ndis-tag" href="#how-it-works--ndis"><img src="images/ndis-badge.svg" alt="NDIS"><span>Registered NDIS provider<small>NDIS Registration No. 4-IMFFQ1S</small></span></a>
     </div>
     <img src="images/declutter-after.jpg" alt="A lived-in lounge room, clear and calm after decluttering">
   </div>
@@ -593,7 +594,7 @@ footer.site{background:var(--ink)}
       <div class="breadcrumb"><a href="#home">Home</a> · How it works</div>
       <h1>Three simple steps, and a fixed price before we lift a finger.</h1>
       <p class="lead">You'll always know who's coming, what it will cost and what happens to your things. Here's the whole process, start to finish.</p>
-      <a class="ndis-tag" href="#how-it-works--ndis"><img src="images/ndis-badge.svg" alt="NDIS"><span>Registered NDIS provider<small>NDIS Provider No. pending</small></span></a>
+      <a class="ndis-tag" href="#how-it-works--ndis"><img src="images/ndis-badge.svg" alt="NDIS"><span>Registered NDIS provider<small>NDIS Registration No. 4-IMFFQ1S</small></span></a>
     </div>
     <img src="images/declutter-consult.jpg" alt="Two women talking through a plan at a kitchen table">
   </div>
@@ -634,7 +635,7 @@ footer.site{background:var(--ink)}
     <div class="why-grid">
       <div class="why-card"><span class="q">The consultation</span><p>The home visit and written plan are a fixed price. You'll know the number before we book it, and the plan is yours whether or not you go ahead.</p></div>
       <div class="why-card"><span class="q">The work</span><p>Decluttering and removal is quoted on the size of the job and what you want to achieve. We'll be transparent about the cost and work within your budget.</p></div>
-      <div class="why-card"><span class="q">NDIS funding</span><p>We're a registered NDIS provider. Where clutter is affecting your health, safety or independence, the work can be funded through your plan. We work with your plan manager or support coordinator and bill your plan directly.</p><a class="ndis-tag" href="#how-it-works--ndis"><img src="images/ndis-badge.svg" alt="NDIS"><span>Registered NDIS provider<small>NDIS Provider No. pending</small></span></a></div>
+      <div class="why-card"><span class="q">NDIS funding</span><p>We're a registered NDIS provider. Where clutter is affecting your health, safety or independence, the work can be funded through your plan. We work with your plan manager or support coordinator and bill your plan directly.</p><a class="ndis-tag" href="#how-it-works--ndis"><img src="images/ndis-badge.svg" alt="NDIS"><span>Registered NDIS provider<small>NDIS Registration No. 4-IMFFQ1S</small></span></a></div>
     </div>
   </div>
 </section>
@@ -671,7 +672,7 @@ footer.site{background:var(--ink)}
       <span class="eyebrow">Run by women. For women.</span>
       <h1>Australia's only rubbish and re-organising company run by women.</h1>
       <p class="lead">We started Declutter because we kept meeting women carrying the whole mental load of a home, and nobody was offering help that felt safe, practical and complete.</p>
-      <a class="ndis-tag" href="#how-it-works--ndis"><img src="images/ndis-badge.svg" alt="NDIS"><span>Registered NDIS provider<small>NDIS Provider No. pending</small></span></a>
+      <a class="ndis-tag" href="#how-it-works--ndis"><img src="images/ndis-badge.svg" alt="NDIS"><span>Registered NDIS provider<small>NDIS Registration No. 4-IMFFQ1S</small></span></a>
     </div>
     <img src="images/declutter-hero.jpg" alt="Two of the Declutter team laughing together on a front verandah">
   </div>
@@ -721,7 +722,7 @@ footer.site{background:var(--ink)}
       <p class="lead">Women still carry most of the mental load of running a home. When it gets on top of them, the last thing they want is to be judged for it, or to hand the problem to someone who only half-solves it.</p>
       <p>Our clients tell us they feel safer with a team of women in the house, more comfortable talking about what's really going on, and relieved that nobody is going to make them feel small about it. That's the whole reason Declutter exists.</p>
       <a class="more" href="#contact">Talk to us →</a>
-      <div style="margin-top:18px"><a class="ndis-tag" href="#how-it-works--ndis"><img src="images/ndis-badge.svg" alt="NDIS"><span>Registered NDIS provider<small>NDIS Provider No. pending</small></span></a></div>
+      <div style="margin-top:18px"><a class="ndis-tag" href="#how-it-works--ndis"><img src="images/ndis-badge.svg" alt="NDIS"><span>Registered NDIS provider<small>NDIS Registration No. 4-IMFFQ1S</small></span></a></div>
     </div>
     <img src="images/declutter-sorting.jpg" alt="A woman sorting boxes in a bright living room">
   </div>
@@ -743,11 +744,11 @@ footer.site{background:var(--ink)}
       <div class="breadcrumb"><a href="#home">Home</a> · FAQ</div>
       <h1>Questions people ask before they book.</h1>
       <p class="lead" style="margin-inline:auto">If yours isn't here, call 1300 XXX XXX or <a href="#contact">send us a message</a>. We're happy to talk anything through.</p>
-      <div style="margin-top:8px"><a class="ndis-tag" href="#how-it-works--ndis"><img src="images/ndis-badge.svg" alt="NDIS"><span>Registered NDIS provider<small>NDIS Provider No. pending</small></span></a></div>
+      <div style="margin-top:8px"><a class="ndis-tag" href="#how-it-works--ndis"><img src="images/ndis-badge.svg" alt="NDIS"><span>Registered NDIS provider<small>NDIS Registration No. 4-IMFFQ1S</small></span></a></div>
     </div>
   </div>
 </section>
-<section class="faq"><div class="wrap"><div class="faq-group"><h2>Getting started</h2><div class="faq-list"><details><summary>How does the process work?</summary><p>After an initial phone chat, one of our team visits you at home, talks through your lifestyle and what you want to achieve, and, with your permission, takes photos of each area. You then get a written, step-by-step decluttering plan and a fixed price for the consultation. From there we work with you at every stage and provide options that suit your needs and budget.</p></details><details><summary>Do I need a professional organiser?</summary><p>Only you can answer that. Our clients are usually feeling overwhelmed, don't know where to start, or need a decluttered and safe environment so other in-home support services can do their job. We can give you as much or as little support as you want.</p></details><details><summary>Do I need to tidy up before you come?</summary><p>No. Please don't. Seeing the space as it really is helps us plan properly, and we have seen it all before. There is no judgement here, ever.</p></details><details><summary>Where do you work?</summary><p>Brisbane, Sydney, Canberra, Melbourne, Geelong, Ballarat and Bendigo. If you're somewhere else, get in touch anyway and we'll see what we can do.</p></details></div></div><div class="faq-group"><h2>Cost and funding</h2><div class="faq-list"><details><summary>How much does it cost?</summary><p>The initial consultation and written plan are a fixed price, so you know exactly what you're paying before we start. The decluttering and removal work depends on the size of the job and what you want to achieve. We'll be transparent about that cost and work within your budget.</p></details><details><summary>Can the NDIS pay for this?</summary><p>Yes, in many cases. We're a registered NDIS provider, so where a cluttered home is affecting your health, safety or independence the work can be funded through your plan, whether it's self-managed, plan-managed or NDIA-managed. Talk to us, your plan manager or your support coordinator about what your plan covers.</p></details><details><summary>Are cleaning or extra services included?</summary><p>Our role isn't hands-on cleaning, though we wipe down as we go. If you'd like cleaning or other services, we can arrange them and they're quoted separately, up front.</p></details></div><a class="ndis-tag" href="#how-it-works--ndis"><img src="images/ndis-badge.svg" alt="NDIS"><span>Registered NDIS provider<small>NDIS Provider No. pending</small></span></a></div><div class="faq-group"><h2>During the job</h2><div class="faq-list"><details><summary>Do I have to be there?</summary><p>For the first session we strongly recommend it, because everyone lives differently and we want to make sure nothing important is missed. Once we understand your vision, many clients prefer to leave us to it. Talk to us about what would suit you.</p></details><details><summary>How many people will come to my house?</summary><p>Usually one of our team is enough. For bigger jobs, or where there's a lot to remove, we may bring extra hands, but we'll always discuss that with you first.</p></details><details><summary>Will you make me throw things out?</summary><p>Absolutely not. You're in control and you make every decision. We'll help you think it through, ask questions and keep things moving, but nothing is discarded without your say-so.</p></details><details><summary>What about sentimental items?</summary><p>We'll work through your sentimental items with you and help you decide what really needs to stay in the home. Nothing sentimental is ever discarded without checking with you first.</p></details><details><summary>What's the difference between decluttering and organising?</summary><p>Decluttering is reducing what you own to a level you can live with. Organising is giving what stays a proper home. Our core job is the first; we do enough of the second that the result lasts.</p></details></div></div><div class="faq-group"><h2>Your belongings</h2><div class="faq-list"><details><summary>Do you take the rubbish away, or is that separate?</summary><p>We take it away. That's what makes us different from most organising services. Furniture, white goods, mattresses, general rubbish, garden and garage items are removed by our team, usually on the same day.</p></details><details><summary>Can you help me sell or donate my unwanted items?</summary><p>Yes. Minimising waste is part of our ethos. We may be able to sell some items through various channels, and we'd love to coach you to do your own selling if you'd like. For donations we take everything away for you. We work with domestic and family violence organisations, homelessness services, animal welfare, food banks, refugee programs, community groups and local op shops.</p></details><details><summary>Do you care about the environment?</summary><p>Yes. We partner with like-minded organisations to keep as much as possible out of landfill. Old towels go to animal shelters, spare furniture goes to families starting again, and we'll list something free online rather than waste a decent item.</p></details><details><summary>Is my privacy protected?</summary><p>Completely. We often work with financial paperwork, bedrooms and very personal items. Everything we see stays confidential, and we're bound by the IOPO Code of Practice.</p></details></div></div><div class="faq-group"><h2>Sensitive situations</h2><div class="faq-list"><details><summary>Can you help with hoarding?</summary><p>Yes. Hoarding is a recognised health condition and there is no shame in reaching out for help. We work in a professional, caring and compassionate way, at your pace. If it would help, we can coordinate with your support worker, family or other services.</p></details><details><summary>Do you offer counselling or psychological support?</summary><p>No. A professional organiser's scope of practice doesn't extend to counselling or psychological services. We act with honesty, integrity and empathy, and if we're concerned for your welfare we can help you find the right support. Who you engage, and whether you do, is always your decision.</p></details><details><summary>Can you help with a deceased estate?</summary><p>Yes. We have experience clearing estates with care. We'll sort belongings, set aside items the family wants to keep, and arrange for the rest to be sold, donated or removed in line with your wishes.</p></details></div></div></div></section>
+<section class="faq"><div class="wrap"><div class="faq-group"><h2>Getting started</h2><div class="faq-list"><details><summary>How does the process work?</summary><p>After an initial phone chat, one of our team visits you at home, talks through your lifestyle and what you want to achieve, and, with your permission, takes photos of each area. You then get a written, step-by-step decluttering plan and a fixed price for the consultation. From there we work with you at every stage and provide options that suit your needs and budget.</p></details><details><summary>Do I need a professional organiser?</summary><p>Only you can answer that. Our clients are usually feeling overwhelmed, don't know where to start, or need a decluttered and safe environment so other in-home support services can do their job. We can give you as much or as little support as you want.</p></details><details><summary>Do I need to tidy up before you come?</summary><p>No. Please don't. Seeing the space as it really is helps us plan properly, and we have seen it all before. There is no judgement here, ever.</p></details><details><summary>Where do you work?</summary><p>Brisbane, Sydney, Canberra, Melbourne, Geelong, Ballarat and Bendigo. If you're somewhere else, get in touch anyway and we'll see what we can do.</p></details></div></div><div class="faq-group"><h2>Cost and funding</h2><div class="faq-list"><details><summary>How much does it cost?</summary><p>The initial consultation and written plan are a fixed price, so you know exactly what you're paying before we start. The decluttering and removal work depends on the size of the job and what you want to achieve. We'll be transparent about that cost and work within your budget.</p></details><details><summary>Can the NDIS pay for this?</summary><p>Yes, in many cases. We're a registered NDIS provider, so where a cluttered home is affecting your health, safety or independence the work can be funded through your plan, whether it's self-managed, plan-managed or NDIA-managed. Talk to us, your plan manager or your support coordinator about what your plan covers.</p></details><details><summary>Are cleaning or extra services included?</summary><p>Our role isn't hands-on cleaning, though we wipe down as we go. If you'd like cleaning or other services, we can arrange them and they're quoted separately, up front.</p></details></div><a class="ndis-tag" href="#how-it-works--ndis"><img src="images/ndis-badge.svg" alt="NDIS"><span>Registered NDIS provider<small>NDIS Registration No. 4-IMFFQ1S</small></span></a></div><div class="faq-group"><h2>During the job</h2><div class="faq-list"><details><summary>Do I have to be there?</summary><p>For the first session we strongly recommend it, because everyone lives differently and we want to make sure nothing important is missed. Once we understand your vision, many clients prefer to leave us to it. Talk to us about what would suit you.</p></details><details><summary>How many people will come to my house?</summary><p>Usually one of our team is enough. For bigger jobs, or where there's a lot to remove, we may bring extra hands, but we'll always discuss that with you first.</p></details><details><summary>Will you make me throw things out?</summary><p>Absolutely not. You're in control and you make every decision. We'll help you think it through, ask questions and keep things moving, but nothing is discarded without your say-so.</p></details><details><summary>What about sentimental items?</summary><p>We'll work through your sentimental items with you and help you decide what really needs to stay in the home. Nothing sentimental is ever discarded without checking with you first.</p></details><details><summary>What's the difference between decluttering and organising?</summary><p>Decluttering is reducing what you own to a level you can live with. Organising is giving what stays a proper home. Our core job is the first; we do enough of the second that the result lasts.</p></details></div></div><div class="faq-group"><h2>Your belongings</h2><div class="faq-list"><details><summary>Do you take the rubbish away, or is that separate?</summary><p>We take it away. That's what makes us different from most organising services. Furniture, white goods, mattresses, general rubbish, garden and garage items are removed by our team, usually on the same day.</p></details><details><summary>Can you help me sell or donate my unwanted items?</summary><p>Yes. Minimising waste is part of our ethos. We may be able to sell some items through various channels, and we'd love to coach you to do your own selling if you'd like. For donations we take everything away for you. We work with domestic and family violence organisations, homelessness services, animal welfare, food banks, refugee programs, community groups and local op shops.</p></details><details><summary>Do you care about the environment?</summary><p>Yes. We partner with like-minded organisations to keep as much as possible out of landfill. Old towels go to animal shelters, spare furniture goes to families starting again, and we'll list something free online rather than waste a decent item.</p></details><details><summary>Is my privacy protected?</summary><p>Completely. We often work with financial paperwork, bedrooms and very personal items. Everything we see stays confidential, and we're bound by the IOPO Code of Practice.</p></details></div></div><div class="faq-group"><h2>Sensitive situations</h2><div class="faq-list"><details><summary>Can you help with hoarding?</summary><p>Yes. Hoarding is a recognised health condition and there is no shame in reaching out for help. We work in a professional, caring and compassionate way, at your pace. If it would help, we can coordinate with your support worker, family or other services.</p></details><details><summary>Do you offer counselling or psychological support?</summary><p>No. A professional organiser's scope of practice doesn't extend to counselling or psychological services. We act with honesty, integrity and empathy, and if we're concerned for your welfare we can help you find the right support. Who you engage, and whether you do, is always your decision.</p></details><details><summary>Can you help with a deceased estate?</summary><p>Yes. We have experience clearing estates with care. We'll sort belongings, set aside items the family wants to keep, and arrange for the rest to be sold, donated or removed in line with your wishes.</p></details></div></div></div></section>
 
 <section class="cta-band">
   <div class="wrap">
@@ -774,7 +775,7 @@ footer.site{background:var(--ink)}
           <div><dt>Head office</dt><dd>Level 2, 530 Lonsdale Street, Melbourne VIC 3000</dd></div>
           <div><dt>Where we work</dt><dd><ul class="areas" style="margin-top:8px"><li>Brisbane</li><li>Sydney</li><li>Canberra</li><li>Melbourne</li><li>Geelong</li><li>Ballarat</li><li>Bendigo</li></ul></dd></div>
         </dl>
-        <div style="margin-top:22px"><a class="ndis-tag" href="#how-it-works--ndis"><img src="images/ndis-badge.svg" alt="NDIS"><span>Registered NDIS provider<small>NDIS Provider No. pending</small></span></a></div>
+        <div style="margin-top:22px"><a class="ndis-tag" href="#how-it-works--ndis"><img src="images/ndis-badge.svg" alt="NDIS"><span>Registered NDIS provider<small>NDIS Registration No. 4-IMFFQ1S</small></span></a></div>
       </div>
     </div>
     <form name="enquiry" method="POST" action="/#thanks" data-netlify="true" netlify-honeypot="bot-field">
@@ -835,7 +836,7 @@ footer.site{background:var(--ink)}
         <div class="foot-logo"><img src="images/declutter-logo.png" alt="Declutter.com.au"></div>
         <p>Australia's only rubbish and re-organising company run by women. Decluttering, downsizing, deceased estates, hoarding support and rubbish removal. A registered NDIS provider.</p>
         <p class="rg-line">A Recycle Group initiative.</p>
-        <div style="margin-top:14px"><a class="ndis-tag on-dark" href="#how-it-works--ndis"><img src="images/ndis-badge.svg" alt="NDIS"><span>Registered NDIS provider<small>NDIS Provider No. pending</small></span></a></div>
+        <div style="margin-top:14px"><a class="ndis-tag on-dark" href="#how-it-works--ndis"><img src="images/ndis-badge.svg" alt="NDIS"><span>Registered NDIS provider<small>NDIS Registration No. 4-IMFFQ1S</small></span></a></div>
       </div>
       <div>
         <h4>Services</h4>
@@ -856,7 +857,7 @@ footer.site{background:var(--ink)}
     </div>
     <div class="foot-bottom">
       <span>© 2026 Declutter.com.au · Brisbane · Sydney · Canberra · Melbourne · Geelong · Ballarat · Bendigo</span>
-      <span>Members of the Institute of Professional Organisers</span>
+      <span>Members of the Institute of Professional Organisers · NDIS Registration No. 4-IMFFQ1S</span>
     </div>
   </div>
 </footer>
